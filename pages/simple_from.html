@@ -21,29 +21,29 @@
         </div>
         <div>
            <label for="email">email input type: </label>
-           <input type="email" id="email" name="email">
+           <input type="email" id="email" name="email" >
            <error-output class="email-error" for="email"></error-output>
         </div>
         <div>
            <label for="url">url input type: </label>
-           <input type="url" id="url" name="url">
+           <input type="url" id="url" name="url" >
         </div>
         <div>
            <label for="number">number input type: </label>
-           <input type="number" id="number" name="number">
+           <input type="number" id="number" name="number" >
         </div>
         <div>
            <label for="tel">tel input type: </label>
-           <input type="tel" id="tel" name="tel">
+           <input type="tel" id="tel" name="tel" >
            <error-output class="tel-error" for="tel"></error-output>
         </div>
         <div>
            <label for="search">search input type: </label>
-           <input type="search" id="search" name="search">
+           <input type="search" id="search" name="search" >
         </div>
         <div class="nativeDateTimePicker">
            <label for="party">Choose a date and time</label>
-           <input type="datetime-local" id="party" name="bday">
+           <input type="datetime-local" id="party" name="bday" >
            <span class="validity"></span>
         </div>
         <div>
@@ -59,13 +59,25 @@
 
     
     <script>
+
+      const text=document.querySelector('#text');
+      const textError=document.querySelector('.text-error');
+      text.addEventListener('input',function(){
+         let nameRegex = RegExp('^[A-Z]{1}[A-Za-z]{2,}$');
+         if(nameRegex.test(Text.value)){
+            textError.textContent="";
+         }
+         else{
+            textError.textContent="name is not correct";
+         }
+
+      });
+
       const salary = document.querySelector('#salary');
       const output = document.querySelector('.salary-output');
       output.textContent=salary.value;
       salary.addEventListener('input',function(){
          output.textContent=salary.value;
-         
-         
       }) ;        
 
     </script>
