@@ -59,6 +59,18 @@
 
     
     <script>
+       const text=document.querySelector('#email');
+       const emailError=document.querySelector('.email-error');
+       email.addEventListener('input',function(){
+          let emailRegex = RegExp("^([a-zA-z]+)([a-zA-Z0-9_\.\-]+)@([a-z]+)\.([a-zA-Z]{2,4})\.([a-zA-Z]{2})?$");
+          if (emailRegex.test(text.value)) {
+             emailError.textContent="";
+          } else {
+             emailError.textContent="email is not valid";
+          }
+       });
+
+
 
       const text=document.querySelector('#text');
       const textError=document.querySelector('.text-error');
