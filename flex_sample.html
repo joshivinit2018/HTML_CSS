@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo Flex</title>
+    <style>
+        body { padding: 2em; }
+
+        .headeContainer{
+            display: flex;
+            flex-flow: column wrap;
+            align-content: center;
+            background: tomato;
+            font-weight: bold;
+            padding: 10px;
+        }
+        .mainContainer{
+            display: flex;
+            flex-flow: row wrap;
+            align-content: center;
+            font-weight: bold;
+        }
+        .fotterContainer{
+            display: flex;
+            flex-flow: column wrap;
+            align-content: center;
+            background: lightgreen;
+            font-weight: bold;
+            padding: 30px;
+        }
+        article{
+            padding: 10px;
+            margin: 10px;
+            background: aqua;
+        }
+        .mainContaintItem{
+            text-align: left;
+            background: deepskyblue;
+        }
+
+        .sideBarLeftItem{ background-color: gold;}
+        .sideBarRightItem{ background-color: hotpink;}
+        .sideBarItem{ flex: 1 0 0; border: 0px solid green;}
+        .mainContaintItem{flex: 3 0px;}
+        .sideBarLeftItem{order: 1;}
+        .mainContaintItem{order: 2;}
+        .sideBarRightItem{order: 3;}
+
+    </style>
+</head>
+<body>
+    <header class="headeContainer"><h1>HEADER - Sample FlexBox</h1></header>
+    <div class="mainContainer">
+        <section class="mainContaintItem">
+            <article>
+                <h2 class="center">First Article</h2>
+                <p class="center">First Article are Here</p>
+            </article>
+            <article>
+                <h2 class="center">Second Article</h2>
+                <p class="center">Second Article are Here</p>
+            </article>
+            <article>
+                <h2 class="center">Third Article</h2>
+                <p class="center">Third Article are Here</p>
+            </article>
+        </section>
+        <sideBar class="sideBarItem sideBarLeftItem">
+            <div class="center">
+                <p>
+                    left Side Bar
+                </p>
+            </div>
+        </sideBar>
+        <sideBar class="sideBarItem sideBarRightItem">
+            <div class="center">
+                <p>
+                    Right Side Bar
+                </p>
+            </div>
+        </sideBar>
+
+    </div>
+    <footer class="fotterContainer">Footer</footer>
+</body>
+</html>
